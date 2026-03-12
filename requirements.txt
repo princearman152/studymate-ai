@@ -1,0 +1,5 @@
+flask
+groq
+pytesseract
+pillow
+numpy

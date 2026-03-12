@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>StudyMate AI</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h1>StudyMate AI</h1>
+<p>Smart Study Assistant for Students</p>
+
+<form method="POST" enctype="multipart/form-data">
+
+<textarea name="notes" placeholder="Paste your study notes here"></textarea>
+
+<br><br>
+
+<label>Upload handwritten notes image:</label>
+<br>
+
+<input type="file" name="image">
+
+<br><br>
+
+<button type="submit">Generate Summary & Quiz</button>
+
+</form>
+<div class="result">
+    <h2>Result</h2>
+    <div class="output">{{ result | safe }}</div>
+</div>
+
+</body>
+</html>

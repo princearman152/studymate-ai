@@ -1,0 +1,41 @@
+body{
+font-family:Arial;
+background:#0f172a;
+color:white;
+text-align:center;
+}
+
+h1{
+font-size:40px;
+}
+
+textarea{
+width:80%;
+height:200px;
+padding:10px;
+border-radius:10px;
+margin-top:20px;
+}
+
+button{
+padding:12px 25px;
+margin-top:20px;
+background:#22c55e;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+
+.result{
+margin-top:30px;
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+}
+.output{
+    text-align:left;
+    white-space:pre-wrap;
+    line-height:1.6;
+    font-size:16px;
+}
