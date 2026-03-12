@@ -18,27 +18,14 @@ def index():
 
     if request.method == "POST":
 
-        notes = request.form.get("notes","")
+        notes = request.form.get("notes", "")
 
-        if "image" in request.files:
-            file = request.files["image"]
+if "image" in request.files:
+    file = request.files["image"]
 
-            if file.filename != "":
-                img = Image.open(file).convert("L")
-
-                img = img.resize((img.width*2, img.height*2))
-
-                img = np.array(img)
-                img = (img > 150) * 255
-                img = Image.fromarray(img.astype('uint8'))
-
-                extracted_text = pytesseract.image_to_string(img, lang="eng")
-
-                extracted_text = extracted_text.replace("\n\n", "\n")
-
-                print(extracted_text)
-
-                notes = notes + "\n" + extracted_text
+    if file.filename != "":
+        print("Image uploaded but OCR disabled on server")
+         
 
         prompt = f"""
 You are an AI study assistant.
